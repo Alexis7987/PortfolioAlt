@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Alexis BOURDEAU — BTS SIO SLAM</title>
-    <meta name="description" content="Portfolio professionnel d'Alexis BOURDEAU, étudiant en BTS SIO option SLAM à l'Institution Saint-Aspais. Découvrez mon parcours, mes compétences et mes projets.">
+    <title>Alexis BOURDEAU - Portfolio BTS SIO</title>
+    <meta name="description" content="Portfolio d'Alexis BOURDEAU, étudiant BTS SIO option SLAM.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Particle Canvas Background -->
-    <canvas id="particles-canvas"></canvas>
 
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#accueil" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>AB<span class="logo-bracket">/&gt;</span>
-            </a>
+            <a href="#accueil" class="nav-logo">Alexis B.</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -43,171 +41,125 @@
         </div>
     </nav>
 
-    <!-- ===================== ACCUEIL / HERO ===================== -->
+    <!-- ACCUEIL -->
     <section id="accueil" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <p class="hero-greeting animate-on-scroll">Bonjour, je suis</p>
-                <h1 class="hero-name animate-on-scroll">Alexis <span class="accent">BOURDEAU</span></h1>
-                <h2 class="hero-title animate-on-scroll">Étudiant en BTS SIO — Option SLAM</h2>
-                <p class="hero-description animate-on-scroll">
-                    Passionné par la logique algorithmique et l'analyse de données, 
-                    je recherche une alternance en informatique (Bac+3) spécialité Data & Analyse 
-                    pour septembre 2026.
+                <h1 class="hero-name">Alexis BOURDEAU</h1>
+                <h2 class="hero-title">Étudiant BTS SIO — Option SLAM</h2>
+                <p class="hero-description">
+                    Actuellement en BTS SIO (option SLAM), j'intègre une Licence Informatique (Bac+3)
+                    en septembre 2026. Passionné par la logique algorithmique et l'analyse de données,
+                    je recherche une alternance pour vous accompagner dans l'exploitation de vos données
+                    et l'automatisation de vos processus.
                 </p>
-                <div class="hero-cta animate-on-scroll">
+                <div class="hero-cta">
                     <a href="#projets" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> Voir mes projets
+                        <i class="fas fa-folder-open"></i> Mes projets
                     </a>
                     <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Me contacter
+                        <i class="fas fa-envelope"></i> Contact
                     </a>
-                </div>
-                <div class="hero-stats animate-on-scroll">
-                    <div class="stat">
-                        <span class="stat-number" data-target="2">0</span>
-                        <span class="stat-label">Stages réalisés</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Projets réalisés</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Langages maîtrisés</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual animate-on-scroll">
-                <div class="hero-avatar-wrapper">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar-glow"></div>
-                    <div class="avatar-initials">AB</div>
+                    <a href="CV ALEXIS BOURDEAU.pdf" download class="btn btn-outline">
+                        <i class="fas fa-download"></i> Mon CV
+                    </a>
                 </div>
             </div>
         </div>
-        <a href="#parcours" class="scroll-indicator">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
-        </a>
     </section>
 
-    <!-- ===================== PARCOURS PROFESSIONNEL ===================== -->
+    <!-- PARCOURS -->
     <section id="parcours">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-road"></i></span>
-                Parcours Professionnel
-            </h2>
-            <p class="section-subtitle animate-on-scroll">Mon parcours de formation et mes expériences professionnelles</p>
+            <h2 class="section-title">Parcours Professionnel</h2>
 
             <div class="timeline">
-                <!-- Formation à venir -->
-                <div class="timeline-item animate-on-scroll" data-side="right">
+                <div class="timeline-item right">
                     <div class="timeline-dot upcoming"></div>
-                    <div class="timeline-content glass-card">
-                        <span class="timeline-badge upcoming-badge">
-                            <i class="fas fa-star"></i> À venir
-                        </span>
+                    <div class="timeline-card">
+                        <span class="badge badge-upcoming"><i class="fas fa-star"></i> À venir</span>
                         <h3>2026 – 2027</h3>
                         <h4>Licence Informatique — Campus Saint-Aspais, Melun</h4>
                         <p>Spécialité Développement et Logiciel — Formation en alternance (Bac+3)</p>
                     </div>
                 </div>
 
-                <!-- Stage Mairie -->
-                <div class="timeline-item animate-on-scroll" data-side="left">
+                <div class="timeline-item left">
                     <div class="timeline-dot stage"></div>
-                    <div class="timeline-content glass-card">
-                        <span class="timeline-badge stage-badge">
-                            <i class="fas fa-building"></i> Stage
-                        </span>
+                    <div class="timeline-card">
+                        <span class="badge badge-stage"><i class="fas fa-building"></i> Stage</span>
                         <h3>2026</h3>
                         <h4>Stage Informatique & Automatisation — Mairie de Mormant</h4>
                         <ul>
-                            <li><i class="fas fa-brain"></i> IA & Python : Déploiement local de Whisper (OpenAI) pour automatiser la transcription audio</li>
-                            <li><i class="fas fa-cogs"></i> Data & Automatisation : Workflows de tri mail et génération automatique de dossiers (NAPS2)</li>
-                            <li><i class="fas fa-bug"></i> QA & Support : Débogage système (variables Windows), tests fonctionnels et tutoriels utilisateurs</li>
+                            <li>IA & Python : Déploiement local de Whisper (OpenAI) pour automatiser la transcription
+                                audio</li>
+                            <li>Data & Automatisation : Workflows de tri mail et génération automatique de dossiers
+                                (NAPS2)</li>
+                            <li>QA & Support : Débogage système (variables Windows), tests fonctionnels et tutoriels
+                                utilisateurs</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Stage SCADIF -->
-                <div class="timeline-item animate-on-scroll" data-side="right">
+                <div class="timeline-item right">
                     <div class="timeline-dot stage"></div>
-                    <div class="timeline-content glass-card">
-                        <span class="timeline-badge stage-badge">
-                            <i class="fas fa-shield-alt"></i> Stage
-                        </span>
+                    <div class="timeline-card">
+                        <span class="badge badge-stage"><i class="fas fa-shield-alt"></i> Stage</span>
                         <h3>2025</h3>
                         <h4>Stage Informatique & Support — SCADIF</h4>
                         <ul>
-                            <li><i class="fas fa-search"></i> Analyse & Résolution : Dépannage logique des incidents utilisateurs et fiabilisation des postes du domaine</li>
-                            <li><i class="fas fa-lock"></i> Sécurité & Administration : Configuration des accès sécurisés (BeyondTrust) et participation à un audit de cybersécurité</li>
+                            <li>Analyse & Résolution : Dépannage logique des incidents utilisateurs et fiabilisation des
+                                postes</li>
+                            <li>Sécurité & Administration : Configuration des accès sécurisés (BeyondTrust), audit de
+                                cybersécurité</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- BTS SIO -->
-                <div class="timeline-item animate-on-scroll" data-side="left">
+                <div class="timeline-item left">
                     <div class="timeline-dot formation"></div>
-                    <div class="timeline-content glass-card">
-                        <span class="timeline-badge formation-badge">
-                            <i class="fas fa-graduation-cap"></i> Formation
-                        </span>
+                    <div class="timeline-card">
+                        <span class="badge badge-formation"><i class="fas fa-graduation-cap"></i> Formation</span>
                         <h3>2024 – 2026</h3>
                         <h4>BTS SIO option SLAM — Campus Saint-Aspais, Melun</h4>
-                        <p>Solutions Logicielles et Applications Métiers — Développement d'applications, bases de données, algorithmique</p>
+                        <p>Solutions Logicielles et Applications Métiers</p>
                     </div>
                 </div>
 
-                <!-- Baccalauréat -->
-                <div class="timeline-item animate-on-scroll" data-side="right">
+                <div class="timeline-item right">
                     <div class="timeline-dot formation"></div>
-                    <div class="timeline-content glass-card">
-                        <span class="timeline-badge formation-badge">
-                            <i class="fas fa-graduation-cap"></i> Formation
-                        </span>
+                    <div class="timeline-card">
+                        <span class="badge badge-formation"><i class="fas fa-graduation-cap"></i> Formation</span>
                         <h3>2024</h3>
                         <h4>Baccalauréat général — Lycée Henri Becquerel, Nangis</h4>
-                        <p>Obtention du baccalauréat général</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== FORMATION BTS SIO ===================== -->
+    <!-- FORMATION BTS SIO -->
     <section id="formation">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-university"></i></span>
-                Formation BTS SIO
-            </h2>
-            <p class="section-subtitle animate-on-scroll">Résumé de ma formation en Services Informatiques aux Organisations</p>
+            <h2 class="section-title">Formation BTS SIO</h2>
 
             <div class="formation-grid">
-                <div class="formation-main glass-card animate-on-scroll">
+                <div class="card formation-main">
                     <div class="formation-header">
-                        <div class="formation-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
+                        <div class="formation-icon"><i class="fas fa-laptop-code"></i></div>
                         <div>
                             <h3>BTS Services Informatiques aux Organisations</h3>
-                            <p class="formation-school">Institution Saint-Aspais — Melun (77)</p>
+                            <p class="text-muted">Institution Saint-Aspais — Melun (77)</p>
                         </div>
                     </div>
-                    <p>Le <strong>BTS SIO</strong> (Services Informatiques aux Organisations) est un diplôme reconnu par l'État de niveau <strong>Bac+2</strong>. Cette formation prépare les étudiants aux métiers de l'informatique dans les organisations, avec une approche à la fois technique et professionnelle.</p>
-                    <p>La formation se déroule sur <strong>2 ans</strong> et inclut des périodes de stage en entreprise permettant de mettre en pratique les compétences acquises.</p>
-                    
+                    <p>Le BTS SIO est un diplôme reconnu par l'État de niveau Bac+2. Il prépare aux métiers de
+                        l'informatique en entreprise avec deux options possibles :</p>
+
                     <div class="options-grid">
-                        <div class="option-card slam-active">
-                            <div class="option-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h4>Option SLAM</h4>
+                        <div class="option-card active">
+                            <h4><i class="fas fa-code"></i> Option SLAM</h4>
                             <p class="option-full">Solutions Logicielles et Applications Métiers</p>
-                            <span class="option-badge">Ma spécialité</span>
+                            <span class="my-option">Mon option</span>
                             <ul>
                                 <li>Développement d'applications</li>
                                 <li>Conception de bases de données</li>
@@ -216,10 +168,7 @@
                             </ul>
                         </div>
                         <div class="option-card">
-                            <div class="option-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <h4>Option SISR</h4>
+                            <h4><i class="fas fa-network-wired"></i> Option SISR</h4>
                             <p class="option-full">Solutions d'Infrastructure, Systèmes et Réseaux</p>
                             <ul>
                                 <li>Administration systèmes</li>
@@ -232,25 +181,26 @@
                 </div>
 
                 <div class="formation-sidebar">
-                    <div class="glass-card animate-on-scroll">
+                    <div class="card">
                         <h4><i class="fas fa-bullseye"></i> Objectifs de la formation</h4>
                         <ul class="check-list">
-                            <li><i class="fas fa-check-circle"></i> Participer à la production et à la fourniture de services informatiques</li>
-                            <li><i class="fas fa-check-circle"></i> Installer, intégrer et administrer des solutions informatiques</li>
-                            <li><i class="fas fa-check-circle"></i> Gérer le patrimoine informatique d'une organisation</li>
-                            <li><i class="fas fa-check-circle"></i> Répondre aux incidents et aux demandes d'assistance</li>
-                            <li><i class="fas fa-check-circle"></i> Développer la présence en ligne de l'organisation</li>
-                            <li><i class="fas fa-check-circle"></i> Mettre à disposition un service informatique sécurisé</li>
+                            <li><i class="fas fa-check"></i> Participer à la production et fourniture de services
+                                informatiques</li>
+                            <li><i class="fas fa-check"></i> Installer, intégrer et administrer des solutions</li>
+                            <li><i class="fas fa-check"></i> Gérer le patrimoine informatique</li>
+                            <li><i class="fas fa-check"></i> Répondre aux incidents et demandes d'assistance</li>
+                            <li><i class="fas fa-check"></i> Développer la présence en ligne</li>
+                            <li><i class="fas fa-check"></i> Mettre à disposition un service sécurisé</li>
                         </ul>
                     </div>
-                    <div class="glass-card animate-on-scroll">
-                        <h4><i class="fas fa-file-pdf"></i> Documents officiels</h4>
+                    <div class="card">
+                        <h4><i class="fas fa-file-pdf"></i> Documents</h4>
                         <div class="download-links">
-                            <a href="Referentiel_BTS_SIO (3).pdf" download="Referentiel_BTS_SIO" class="btn btn-download">
+                            <a href="Referentiel_BTS_SIO (3).pdf" download class="btn btn-download">
                                 <i class="fas fa-download"></i> Référentiel BTS SIO
                             </a>
-                            <a href="CV ALEXIS BOURDEAU.pdf" download="CV_Alexis_Bourdeau" class="btn btn-download">
-                                <i class="fas fa-download"></i> Télécharger mon CV
+                            <a href="CV ALEXIS BOURDEAU.pdf" download class="btn btn-download">
+                                <i class="fas fa-download"></i> Mon CV
                             </a>
                         </div>
                     </div>
@@ -259,416 +209,337 @@
         </div>
     </section>
 
-    <!-- ===================== COMPÉTENCES ===================== -->
+    <!-- COMPÉTENCES -->
     <section id="competences">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-tools"></i></span>
-                Compétences Techniques
-            </h2>
-            <p class="section-subtitle animate-on-scroll">Les technologies et outils que je maîtrise</p>
+            <h2 class="section-title">Compétences Techniques</h2>
 
             <div class="skills-grid">
-                <!-- Langages de programmation -->
-                <div class="skill-category glass-card animate-on-scroll">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Langages de programmation</h3>
-                    </div>
+                <div class="card skill-category">
+                    <h3><i class="fas fa-code"></i> Langages</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>Python</span><span class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">PHP</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>PHP</span><span class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">Intermédiaire</span>
+                            <div class="skill-info"><span>JavaScript</span><span class="level">Intermédiaire</span>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="65"></div></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>SQL</span><span class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML / CSS</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>HTML / CSS</span><span class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Frameworks & Outils -->
-                <div class="skill-category glass-card animate-on-scroll">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-layer-group"></i>
-                        <h3>Frameworks & Outils</h3>
-                    </div>
+                <div class="card skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & Outils</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Symfony</span>
-                                <span class="skill-level">Intermédiaire</span>
+                            <div class="skill-info"><span>Symfony</span><span class="level">Intermédiaire</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="60"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="60"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">GitHub / Git</span>
-                                <span class="skill-level">Intermédiaire</span>
+                            <div class="skill-info"><span>GitHub / Git</span><span class="level">Intermédiaire</span>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="65"></div></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Visual Studio Code</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>VS Code</span><span class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Excel (Fonctions avancées)</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>Excel (fonctions avancées)</span><span
+                                    class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Power BI</span>
-                                <span class="skill-level">Notions</span>
+                            <div class="skill-info"><span>Power BI</span><span class="level">Notions</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="35"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="35"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Systèmes & Réseau -->
-                <div class="skill-category glass-card animate-on-scroll">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Systèmes & Environnement</h3>
-                    </div>
+                <div class="card skill-category">
+                    <h3><i class="fas fa-server"></i> Systèmes & Environnement</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Windows</span>
-                                <span class="skill-level">Avancé</span>
+                            <div class="skill-info"><span>Windows</span><span class="level">Avancé</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">MySQL / PhpMyAdmin</span>
-                                <span class="skill-level">Intermédiaire</span>
+                            <div class="skill-info"><span>MySQL / PhpMyAdmin</span><span
+                                    class="level">Intermédiaire</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="70"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Railway (Déploiement)</span>
-                                <span class="skill-level">Notions</span>
+                            <div class="skill-info"><span>Railway</span><span class="level">Notions</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="40"></div>
                             </div>
-                            <div class="skill-bar"><div class="skill-progress" data-width="40"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Savoir-être -->
-                <div class="skill-category glass-card animate-on-scroll">
-                    <div class="skill-cat-header">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Savoir-être</h3>
-                    </div>
+                <div class="card skill-category">
+                    <h3><i class="fas fa-user"></i> Savoir-être</h3>
                     <div class="soft-skills">
-                        <span class="soft-skill-tag"><i class="fas fa-check"></i> Rigueur</span>
-                        <span class="soft-skill-tag"><i class="fas fa-check"></i> Autonomie</span>
-                        <span class="soft-skill-tag"><i class="fas fa-check"></i> Travail en équipe</span>
-                        <span class="soft-skill-tag"><i class="fas fa-check"></i> Esprit d'analyse</span>
-                        <span class="soft-skill-tag"><i class="fas fa-check"></i> Curiosité technique</span>
-                        <span class="soft-skill-tag"><i class="fas fa-globe"></i> Anglais B2</span>
+                        <span class="soft-tag">Rigueur</span>
+                        <span class="soft-tag">Autonomie</span>
+                        <span class="soft-tag">Travail en équipe</span>
+                        <span class="soft-tag">Esprit d'analyse</span>
+                        <span class="soft-tag">Curiosité</span>
+                        <span class="soft-tag"><i class="fas fa-globe"></i> Anglais B2</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== PROJETS ===================== -->
+    <!-- PROJETS -->
     <section id="projets">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-project-diagram"></i></span>
-                Mes Projets
-            </h2>
-            <p class="section-subtitle animate-on-scroll">Projets réalisés dans le cadre du BTS SIO et en autonomie</p>
+            <h2 class="section-title">Mes Projets</h2>
 
             <div class="projects-grid">
-                <!-- Projet Symfony -->
-                <div class="project-card glass-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-icon-large">
-                            <i class="fab fa-symfony"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-type">Projet BTS</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fab fa-symfony project-icon"></i>
+                        <span class="project-type">Projet BTS</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Application Symfony — Club Sportif</h3>
-                        <p>Développement d'une application web de gestion de club sportif avec Symfony et EasyAdmin. Le projet intègre un système d'authentification sécurisé, un tableau de bord administrateur et un espace membre personnalisé pour le suivi des objectifs des joueurs.</p>
-                        <div class="project-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">Symfony</span>
-                            <span class="tag">EasyAdmin</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Twig</span>
-                        </div>
+                    <h3>Application Symfony — Club Sportif</h3>
+                    <p>Application web de gestion de club sportif avec Symfony et EasyAdmin. Système d'authentification,
+                        tableau de bord admin et espace membre pour le suivi des objectifs des joueurs.</p>
+                    <div class="tags">
+                        <span>PHP</span><span>Symfony</span><span>EasyAdmin</span><span>MySQL</span><span>Twig</span>
                     </div>
                 </div>
 
-                <!-- Projet RestoCampus -->
-                <div class="project-card glass-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-icon-large">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-type">Projet de groupe</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-utensils project-icon"></i>
+                        <span class="project-type">Projet de groupe</span>
                     </div>
-                    <div class="project-info">
-                        <h3>RestoCampus</h3>
-                        <p>Conception et développement d'une application web pour la restauration sur le campus. Projet réalisé en groupe, en PHP avec une base de données MySQL. Utilisation de GitHub pour la collaboration et Railway pour le déploiement du site en production.</p>
-                        <div class="project-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">GitHub</span>
-                            <span class="tag">Railway</span>
-                        </div>
+                    <h3>RestoCampus</h3>
+                    <p>Application web pour la restauration sur le campus, en PHP avec MySQL. On a utilisé GitHub pour
+                        collaborer et Railway pour le déploiement.</p>
+                    <div class="tags">
+                        <span>PHP</span><span>MySQL</span><span>GitHub</span><span>Railway</span>
                     </div>
                 </div>
 
-                <!-- Projet Whisper / Mairie -->
-                <div class="project-card glass-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-icon-large">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-type">Stage</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-microphone-alt project-icon"></i>
+                        <span class="project-type">Stage</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Whisper — Transcription IA</h3>
-                        <p>Déploiement local du modèle Whisper d'OpenAI à la Mairie de Mormant pour automatiser la transcription audio. Création de workflows automatisés avec Python pour le tri du courrier électronique et la génération de dossiers via NAPS2.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">OpenAI Whisper</span>
-                            <span class="tag">Automatisation</span>
-                            <span class="tag">NAPS2</span>
-                        </div>
+                    <h3>Whisper — Transcription IA</h3>
+                    <p>Déploiement local de Whisper (OpenAI) à la Mairie de Mormant pour transcrire de l'audio
+                        automatiquement. En parallèle, j'ai automatisé le tri des mails et la création de dossiers avec
+                        NAPS2.</p>
+                    <div class="tags">
+                        <span>Python</span><span>OpenAI Whisper</span><span>Automatisation</span><span>NAPS2</span>
                     </div>
                 </div>
 
-                <!-- Portfolio -->
-                <div class="project-card glass-card animate-on-scroll">
-                    <div class="project-image">
-                        <div class="project-icon-large">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-type">Personnel</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-globe project-icon"></i>
+                        <span class="project-type">Personnel</span>
                     </div>
-                    <div class="project-info">
-                        <h3>Portfolio Personnel</h3>
-                        <p>Conception et réalisation de ce portfolio professionnel en HTML, CSS et JavaScript. Design premium avec thème sombre/clair, animations fluides, particules interactives et layout responsive.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Responsive</span>
-                        </div>
+                    <h3>Ce Portfolio</h3>
+                    <p>Site web statique réalisé pour présenter mon parcours et mes compétences. Fait en HTML/CSS/JS
+                        avec un mode sombre/clair et un design responsive.</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== PROCÉDURES ===================== -->
+    <!-- PROCÉDURES -->
     <section id="procedures">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-clipboard-list"></i></span>
-                Procédures Techniques
-            </h2>
-            <p class="section-subtitle animate-on-scroll">Procédures informatiques réalisées en BTS SIO</p>
+            <h2 class="section-title">Procédures Techniques</h2>
+            <p class="section-subtitle">Procédures réalisées pendant le BTS SIO</p>
 
             <div class="procedures-grid">
-                <div class="procedure-card glass-card animate-on-scroll">
-                    <div class="procedure-number">01</div>
+                <div class="card procedure-card">
                     <div class="procedure-icon"><i class="fas fa-code"></i></div>
-                    <h3>Installation de Visual Studio Code</h3>
+                    <h3>Installation de VS Code</h3>
                     <ol>
-                        <li>Téléchargement depuis le site officiel de Microsoft</li>
-                        <li>Installation pas à pas sous Windows</li>
-                        <li>Configuration de base et personnalisation</li>
-                        <li>Installation des extensions essentielles (Live Server, PHP IntelliSense, Python)</li>
+                        <li>Téléchargement depuis le site officiel</li>
+                        <li>Installation pas à pas sur Windows</li>
+                        <li>Configuration et personnalisation</li>
+                        <li>Extensions utiles (Live Server, IntelliSense...)</li>
                     </ol>
                 </div>
 
-                <div class="procedure-card glass-card animate-on-scroll">
-                    <div class="procedure-number">02</div>
+                <div class="card procedure-card">
                     <div class="procedure-icon"><i class="fab fa-github"></i></div>
-                    <h3>Configuration GitHub & Git</h3>
+                    <h3>Configuration Git & GitHub</h3>
                     <ol>
-                        <li>Installation de Git sur Windows</li>
-                        <li>Configuration initiale (nom, email, clé SSH)</li>
-                        <li>Création d'un dépôt et premier commit</li>
-                        <li>Commandes de base : clone, pull, push, branch</li>
+                        <li>Installation de Git</li>
+                        <li>Configuration (nom, email, clé SSH)</li>
+                        <li>Création d'un dépôt, premier commit</li>
+                        <li>Commandes : clone, pull, push, branch</li>
                     </ol>
                 </div>
 
-                <div class="procedure-card glass-card animate-on-scroll">
-                    <div class="procedure-number">03</div>
+                <div class="card procedure-card">
                     <div class="procedure-icon"><i class="fas fa-database"></i></div>
-                    <h3>Mise en place d'une base MySQL</h3>
+                    <h3>Base de données MySQL</h3>
                     <ol>
-                        <li>Installation de UwAmp / WAMP</li>
+                        <li>Installation de UwAmp</li>
                         <li>Accès à PhpMyAdmin</li>
-                        <li>Création d'une base de données et de tables</li>
-                        <li>Écriture de requêtes SQL (SELECT, INSERT, JOIN)</li>
+                        <li>Création de tables</li>
+                        <li>Requêtes SQL (SELECT, INSERT, JOIN)</li>
                     </ol>
                 </div>
 
-                <div class="procedure-card glass-card animate-on-scroll">
-                    <div class="procedure-number">04</div>
+                <div class="card procedure-card">
                     <div class="procedure-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Configuration BeyondTrust</h3>
                     <ol>
-                        <li>Présentation de l'outil d'accès sécurisé</li>
-                        <li>Configuration des accès distants aux postes</li>
-                        <li>Gestion des droits et des permissions</li>
-                        <li>Bonnes pratiques de cybersécurité</li>
+                        <li>Présentation de l'outil</li>
+                        <li>Accès distant aux postes</li>
+                        <li>Gestion des droits</li>
+                        <li>Bonnes pratiques de sécurité</li>
                     </ol>
                 </div>
 
-                <div class="procedure-card glass-card animate-on-scroll">
-                    <div class="procedure-number">05</div>
+                <div class="card procedure-card">
                     <div class="procedure-icon"><i class="fas fa-microphone-alt"></i></div>
-                    <h3>Déploiement de Whisper (OpenAI)</h3>
+                    <h3>Déploiement Whisper (OpenAI)</h3>
                     <ol>
-                        <li>Installation de Python et des dépendances</li>
-                        <li>Installation locale de Whisper via pip</li>
-                        <li>Configuration du modèle de transcription</li>
-                        <li>Automatisation via un script Python</li>
+                        <li>Installation de Python + dépendances</li>
+                        <li>Installation de Whisper via pip</li>
+                        <li>Configuration du modèle</li>
+                        <li>Script d'automatisation</li>
                     </ol>
                 </div>
 
-                <div class="procedure-card glass-card animate-on-scroll">
-                    <div class="procedure-number">06</div>
+                <div class="card procedure-card">
                     <div class="procedure-icon"><i class="fab fa-symfony"></i></div>
-                    <h3>Création d'un projet Symfony</h3>
+                    <h3>Projet Symfony</h3>
                     <ol>
-                        <li>Installation de Composer et Symfony CLI</li>
-                        <li>Création d'un nouveau projet Symfony</li>
-                        <li>Configuration de la base de données (Doctrine)</li>
-                        <li>Création d'entités, controllers et vues Twig</li>
+                        <li>Installation Composer + Symfony CLI</li>
+                        <li>Création du projet</li>
+                        <li>Configuration BDD (Doctrine)</li>
+                        <li>Entités, controllers, vues Twig</li>
                     </ol>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== VEILLE TECHNOLOGIQUE ===================== -->
+    <!-- VEILLE -->
     <section id="veille">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-satellite-dish"></i></span>
-                Veille Technologique
-            </h2>
-            <p class="section-subtitle animate-on-scroll">L'Évolution du Cloud en 2026 — Ma veille technologique</p>
+            <h2 class="section-title">Veille Technologique</h2>
+            <p class="section-subtitle">L'évolution du Cloud en 2026</p>
 
-            <div class="veille-intro glass-card animate-on-scroll">
-                <p>En 2025-2026, le cloud poursuit sa transformation en s'appuyant sur l'intelligence artificielle, la cybersécurité et des infrastructures plus flexibles. Je suis cette veille via divers flux RSS, articles spécialisés et newsletters professionnelles.</p>
+            <div class="card veille-intro">
+                <p>Le cloud continue de se transformer avec l'IA, la cybersécurité et des infrastructures plus
+                    flexibles.
+                    Je fais ma veille principalement via des flux RSS et des articles spécialisés.</p>
             </div>
 
             <div class="veille-grid">
-                <div class="veille-card glass-card animate-on-scroll">
-                    <div class="veille-card-header">
-                        <div class="veille-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div class="card veille-card">
+                    <div class="veille-header">
+                        <i class="fas fa-cloud"></i>
                         <span class="veille-year">2026</span>
                     </div>
-                    <h3>Souveraineté Cloud & IA Générative (SecNumCloud)</h3>
-                    <p>Face aux enjeux géopolitiques, les entreprises privilégient le cloud hybride et la certification française <strong>SecNumCloud</strong> pour protéger leurs données sensibles et héberger des solutions d'IA générative très gourmandes en ressources.</p>
-                    <a href="https://www.orange-business.com/fr/actualites-evenements/actualites/cloud-entre-moteur-innovation-et-defi-souverainete" target="_blank" class="veille-source">
-                        <i class="fas fa-external-link-alt"></i> Lire l'article — Orange Business
+                    <h3>Souveraineté Cloud & IA Générative</h3>
+                    <p>Les entreprises se tournent de plus en plus vers le cloud hybride et la certification
+                        <strong>SecNumCloud</strong> pour protéger leurs données sensibles tout en hébergeant
+                        des solutions d'IA générative gourmandes en ressources.
+                    </p>
+                    <a href="https://www.orange-business.com/fr/actualites-evenements/actualites/cloud-entre-moteur-innovation-et-defi-souverainete"
+                        target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Source — Orange Business
                     </a>
                 </div>
 
-                <div class="veille-card glass-card animate-on-scroll">
-                    <div class="veille-card-header">
-                        <div class="veille-icon"><i class="fas fa-leaf"></i></div>
+                <div class="card veille-card">
+                    <div class="veille-header">
+                        <i class="fas fa-leaf"></i>
                         <span class="veille-year">2026</span>
                     </div>
-                    <h3>GreenOps : Réduire l'empreinte carbone des Data Centers</h3>
-                    <p>L'éco-responsabilité devient un critère commercial important (<strong>35 % des appels d'offres</strong>) : de nouvelles technologies de refroidissement permettent aujourd'hui de réduire l'usage énergétique du cloud jusqu'à <strong>70 %</strong>.</p>
-                    <a href="https://www.thegreenshot.io/fr/non-classe-fr/pollution-data-center/" target="_blank" class="veille-source">
-                        <i class="fas fa-external-link-alt"></i> Lire l'article — The Greenshot
+                    <h3>GreenOps & Data Centers</h3>
+                    <p>L'éco-responsabilité prend de l'importance dans les appels d'offres (<strong>35%</strong> d'entre
+                        eux).
+                        Les nouvelles techniques de refroidissement réduisent la consommation énergétique
+                        du cloud jusqu'à <strong>70%</strong>.</p>
+                    <a href="https://www.thegreenshot.io/fr/non-classe-fr/pollution-data-center/" target="_blank"
+                        class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Source — The Greenshot
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== STAGES / RAPPORTS ===================== -->
+    <!-- STAGES -->
     <section id="stages">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-file-alt"></i></span>
-                Rapports de Stage
-            </h2>
-            <p class="section-subtitle animate-on-scroll">Liens vers mes rapports de stage rédigés pendant le BTS SIO</p>
+            <h2 class="section-title">Rapports de Stage</h2>
 
             <div class="stages-grid">
-                <div class="stage-card glass-card animate-on-scroll">
-                    <div class="stage-illustration">
-                        <i class="fas fa-building"></i>
-                    </div>
+                <div class="card stage-card">
+                    <div class="stage-icon"><i class="fas fa-building"></i></div>
                     <div class="stage-info">
                         <span class="stage-period">2026 — 6 semaines</span>
                         <h3>Stage à la Mairie de Mormant</h3>
-                        <p>Informatique & Automatisation — IA, Python, Whisper, NAPS2, support utilisateur</p>
+                        <p>Informatique & Automatisation — IA, Python, Whisper, NAPS2, support</p>
                         <a href="#" class="btn btn-outline btn-sm">
                             <i class="fas fa-file-pdf"></i> Rapport de stage (à venir)
                         </a>
                     </div>
                 </div>
 
-                <div class="stage-card glass-card animate-on-scroll">
-                    <div class="stage-illustration">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                <div class="card stage-card">
+                    <div class="stage-icon"><i class="fas fa-shield-alt"></i></div>
                     <div class="stage-info">
                         <span class="stage-period">2025 — 6 semaines</span>
                         <h3>Stage à SCADIF</h3>
-                        <p>Informatique & Support — Résolution d'incidents, cybersécurité, BeyondTrust</p>
+                        <p>Support & Sécurité — Résolution d'incidents, cybersécurité, BeyondTrust</p>
                         <a href="#" class="btn btn-outline btn-sm">
                             <i class="fas fa-file-pdf"></i> Rapport de stage (à venir)
                         </a>
@@ -678,77 +549,72 @@
         </div>
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
+    <!-- CONTACT -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">
-                <span class="title-icon"><i class="fas fa-envelope"></i></span>
-                Contact
-            </h2>
-            <p class="section-subtitle animate-on-scroll">N'hésitez pas à me contacter pour toute question ou opportunité</p>
+            <h2 class="section-title">Contact</h2>
 
             <div class="contact-grid">
-                <div class="contact-info-panel glass-card animate-on-scroll">
+                <div class="card contact-info">
                     <h3>Mes coordonnées</h3>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <p class="contact-label">Email</p>
+                            <p class="label">Email</p>
                             <a href="mailto:alexisbourdeau77@gmail.com">alexisbourdeau77@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <p class="contact-label">Téléphone</p>
+                            <p class="label">Téléphone</p>
                             <a href="tel:+33767010312">07.67.01.03.12</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <p class="contact-label">Localisation</p>
+                            <p class="label">Localisation</p>
                             <p>La Chapelle-Gauthier, 77720</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-school"></i></div>
+                        <i class="fas fa-school"></i>
                         <div>
-                            <p class="contact-label">Établissement</p>
-                            <a href="https://www.institutionsaintaspais.fr/" target="_blank">Institution Saint-Aspais</a>
+                            <p class="label">Établissement</p>
+                            <a href="https://www.institutionsaintaspais.fr/" target="_blank">Institution
+                                Saint-Aspais</a>
                         </div>
                     </div>
                     <div class="contact-socials">
-                        <a href="https://github.com/" target="_blank" class="social-btn" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/" target="_blank" class="social-btn" title="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                        <a href="https://github.com/Alexis7987" target="_blank" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
-                <div class="contact-form-panel glass-card animate-on-scroll">
+                <div class="card contact-form-panel">
                     <h3>Envoyer un message</h3>
-                    <form action="mailto:alexisbourdeau77@gmail.com" method="post" enctype="text/plain" id="contact-form">
+                    <form action="mailto:alexisbourdeau77@gmail.com" method="post" enctype="text/plain">
                         <div class="form-group">
-                            <label for="contact-nom">Votre nom</label>
-                            <input type="text" id="contact-nom" name="nom" required placeholder="Jean Dupont">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" required>
                         </div>
                         <div class="form-group">
-                            <label for="contact-email">Votre email</label>
-                            <input type="email" id="contact-email" name="email" required placeholder="jean.dupont@email.com">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="contact-sujet">Sujet</label>
-                            <input type="text" id="contact-sujet" name="sujet" required placeholder="Votre sujet">
+                            <label for="sujet">Sujet</label>
+                            <input type="text" id="sujet" name="sujet" required>
                         </div>
                         <div class="form-group">
-                            <label for="contact-message">Votre message</label>
-                            <textarea id="contact-message" name="message" required placeholder="Votre message..."></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Envoyer
                         </button>
                     </form>
                 </div>
@@ -756,16 +622,11 @@
         </div>
     </section>
 
-    <!-- ===================== FOOTER ===================== -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>AB<span class="logo-bracket">/&gt;</span>
-                    </span>
-                    <p>Portfolio Alexis BOURDEAU — BTS SIO 2024-2026</p>
-                </div>
+                <p>Alexis BOURDEAU — BTS SIO 2024-2026</p>
                 <div class="footer-links">
                     <a href="#accueil">Accueil</a>
                     <a href="#parcours">Parcours</a>
@@ -774,9 +635,9 @@
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Alexis BOURDEAU. Tous droits réservés.</p>
-                    <a href="https://www.institutionsaintaspais.fr/" target="_blank" class="footer-school">
-                        <i class="fas fa-school"></i> Institution Saint-Aspais — Melun
+                    <p>&copy; 2026 Alexis BOURDEAU</p>
+                    <a href="https://www.institutionsaintaspais.fr/" target="_blank">
+                        <i class="fas fa-school"></i> Institution Saint-Aspais
                     </a>
                 </div>
             </div>
@@ -785,4 +646,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

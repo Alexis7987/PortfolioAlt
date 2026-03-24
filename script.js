@@ -1,167 +1,37 @@
-/* ============================================================
-   PORTFOLIO ALEXIS BOURDEAU — JavaScript
-   Particles, Scroll Animations, Theme Toggle, Counter, Skill Bars
-   ============================================================ */
+// script.js
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
 
-    // ======================== PARTICLES ========================
-    const canvas = document.getElementById('particles-canvas');
-    if (canvas) {
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-        let mouse = { x: null, y: null };
+    // Nav toggle mobile
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+    var navLinks = document.querySelectorAll('.nav-link');
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        class Particle {
-            constructor() {
-                this.reset();
-            }
-            reset() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 0.5;
-                this.speedX = (Math.random() - 0.5) * 0.4;
-                this.speedY = (Math.random() - 0.5) * 0.4;
-                this.opacity = Math.random() * 0.5 + 0.1;
-            }
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                // Mouse interaction
-                if (mouse.x !== null) {
-                    const dx = this.x - mouse.x;
-                    const dy = this.y - mouse.y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
-                        const force = (120 - dist) / 120;
-                        this.x += (dx / dist) * force * 1.5;
-                        this.y += (dy / dist) * force * 1.5;
-                    }
-                }
-
-                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-            }
-            draw() {
-                const isLight = document.body.classList.contains('light-theme');
-                const color = isLight ? `rgba(99, 102, 241, ${this.opacity})` : `rgba(148, 163, 184, ${this.opacity})`;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = color;
-                ctx.fill();
-            }
-        }
-
-        function initParticles() {
-            particles = [];
-            const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
-            for (let i = 0; i < count; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function connectParticles() {
-            const isLight = document.body.classList.contains('light-theme');
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 150) {
-                        const opacity = (1 - dist / 150) * 0.15;
-                        const color = isLight
-                            ? `rgba(99, 102, 241, ${opacity})`
-                            : `rgba(148, 163, 184, ${opacity})`;
-                        ctx.beginPath();
-                        ctx.strokeStyle = color;
-                        ctx.lineWidth = 0.5;
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            connectParticles();
-            requestAnimationFrame(animateParticles);
-        }
-
-        initParticles();
-        animateParticles();
-
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        });
-
-        window.addEventListener('mouseout', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
-
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            initParticles();
-        });
-    }
-
-    // ======================== NAVBAR ========================
-    const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Scroll effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Mobile menu toggle
     if (navToggle) {
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', function () {
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
     }
 
-    // Close mobile menu on link click
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+    // Fermer le menu quand on clique sur un lien
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
         });
     });
 
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section');
-
-    function updateActiveNav() {
-        const scrollPos = window.scrollY + 150;
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-            if (scrollPos >= top && scrollPos < top + height) {
-                navLinks.forEach(link => {
+    // Lien actif dans la nav
+    var sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', function () {
+        var scrollPos = window.scrollY + 100;
+        sections.forEach(function (section) {
+            var top = section.offsetTop;
+            var hauteur = section.offsetHeight;
+            var id = section.getAttribute('id');
+            if (scrollPos >= top && scrollPos < top + hauteur) {
+                navLinks.forEach(function (link) {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + id) {
                         link.classList.add('active');
@@ -169,100 +39,68 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    }
+    });
 
-    window.addEventListener('scroll', updateActiveNav);
+    // Theme sombre / clair
+    var themeBtn = document.getElementById('theme-toggle');
+    var theme = localStorage.getItem('theme');
 
-    // ======================== THEME TOGGLE ========================
-    const themeToggle = document.getElementById('theme-toggle');
-
-    // Restore saved theme
-    const savedTheme = localStorage.getItem('portfolio-theme');
-    if (savedTheme === 'light') {
+    if (theme === 'light') {
         document.body.classList.add('light-theme');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
     }
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
             document.body.classList.toggle('light-theme');
-            const isLight = document.body.classList.contains('light-theme');
-            themeToggle.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            var isLight = document.body.classList.contains('light-theme');
+            themeBtn.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
         });
     }
 
-    // ======================== SCROLL ANIMATIONS ========================
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    // Animation au scroll (fade in)
+    var elements = document.querySelectorAll('.card, .timeline-card, .section-title');
+    elements.forEach(function (el) {
+        el.classList.add('fade-in');
+    });
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -60px 0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    animateElements.forEach(el => observer.observe(el));
+    elements.forEach(function (el) {
+        observer.observe(el);
+    });
 
-    // ======================== SKILL BAR ANIMATION ========================
-    const skillBars = document.querySelectorAll('.skill-progress');
-
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    // Barres de compétences
+    var bars = document.querySelectorAll('.skill-fill');
+    var barObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-                const width = entry.target.getAttribute('data-width');
-                entry.target.style.width = width + '%';
-                skillObserver.unobserve(entry.target);
+                var w = entry.target.getAttribute('data-width');
+                entry.target.style.width = w + '%';
+                barObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
-    skillBars.forEach(bar => skillObserver.observe(bar));
+    bars.forEach(function (bar) {
+        barObserver.observe(bar);
+    });
 
-    // ======================== COUNTER ANIMATION ========================
-    const counters = document.querySelectorAll('.stat-number');
-
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-target'));
-                animateCounter(entry.target, target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => counterObserver.observe(counter));
-
-    function animateCounter(el, target) {
-        let current = 0;
-        const increment = target / 40;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                el.textContent = target;
-                clearInterval(timer);
-            } else {
-                el.textContent = Math.floor(current);
-            }
-        }, 40);
-    }
-
-    // ======================== SMOOTH SCROLL ========================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            var cible = document.querySelector(this.getAttribute('href'));
+            if (cible) {
+                cible.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
