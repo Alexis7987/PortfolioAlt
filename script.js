@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (theme === 'light') {
         document.body.classList.add('light-theme');
-        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        if (themeBtn) themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
     }
 
     if (themeBtn) {
@@ -59,47 +59,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Animation au scroll (fade in)
-    var elements = document.querySelectorAll('.card, .timeline-card, .section-title');
-    elements.forEach(function (el) {
-        el.classList.add('fade-in');
-    });
-
-    var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    elements.forEach(function (el) {
-        observer.observe(el);
-    });
-
-    // Barres de compétences
+    // Barres de compétences (simples, sans animation au scroll complexe)
     var bars = document.querySelectorAll('.skill-fill');
-    var barObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                var w = entry.target.getAttribute('data-width');
-                entry.target.style.width = w + '%';
-                barObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
     bars.forEach(function (bar) {
-        barObserver.observe(bar);
+        var w = bar.getAttribute('data-width');
+        bar.style.width = w + '%';
     });
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
         a.addEventListener('click', function (e) {
-            e.preventDefault();
             var cible = document.querySelector(this.getAttribute('href'));
             if (cible) {
+                e.preventDefault();
                 cible.scrollIntoView({ behavior: 'smooth' });
             }
         });

@@ -9,29 +9,29 @@
 }
 
 :root {
-    --bg-main: #0f1219;
-    --bg-section: #161b26;
-    --bg-card: #1c2333;
-    --text: #e2e8f0;
-    --text-secondary: #8b95a8;
-    --text-muted: #5a647a;
-    --accent: #5b6abf;
-    --accent-hover: #7c89e0;
-    --border: rgba(255, 255, 255, 0.07);
-    --radius: 10px;
-    --font: 'Inter', sans-serif;
+    --bg-main: #121212;
+    --bg-section: #1a1a1a;
+    --bg-card: #242424;
+    --text: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --text-muted: #777777;
+    --accent: #0275d8;
+    --accent-hover: #025aa5;
+    --border: #333333;
+    --radius: 5px;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body.light-theme {
-    --bg-main: #f5f5f7;
-    --bg-section: #ffffff;
-    --bg-card: #f0f0f3;
-    --text: #1a1a2e;
-    --text-secondary: #555;
-    --text-muted: #888;
-    --accent: #4a54a0;
-    --accent-hover: #5b6abf;
-    --border: rgba(0, 0, 0, 0.08);
+    --bg-main: #ffffff;
+    --bg-section: #f4f4f4;
+    --bg-card: #ffffff;
+    --text: #333333;
+    --text-secondary: #555555;
+    --text-muted: #888888;
+    --accent: #0275d8;
+    --accent-hover: #025aa5;
+    --border: #dddddd;
 }
 
 html {
@@ -69,15 +69,13 @@ a:hover {
     left: 0;
     right: 0;
     height: 60px;
-    background: rgba(15, 18, 25, 0.92);
-    backdrop-filter: blur(10px);
+    background: var(--bg-card);
     border-bottom: 1px solid var(--border);
     z-index: 100;
-    transition: background 0.3s;
 }
 
 body.light-theme #navbar {
-    background: rgba(245, 245, 247, 0.92);
+    background: var(--bg-card);
 }
 
 .nav-container {
@@ -204,7 +202,7 @@ section:nth-child(even) {
 
 .card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* ---- HERO ---- */
@@ -1051,16 +1049,7 @@ footer {
 }
 
 /* ---- SCROLL ANIMATE ---- */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Animations removed for a simpler look */
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 900px) {
